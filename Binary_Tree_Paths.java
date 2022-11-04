@@ -12,9 +12,12 @@ class Solution {
             ans.add(cur + root.val);
             return;
         }
-        cur += root.val;
-        cur += "->";
-        helper(root.left, cur);
-        helper(root.right, cur);
+        //cur += root.val;
+        //cur += "->";
+        //helper(root.left, cur);
+        //helper(root.right, cur);
+        
+        helper(root.left, cur+root.val+"->");
+        helper(root.right, cur+root.val+"->");
     }
 }
